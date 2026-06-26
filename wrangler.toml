@@ -1,0 +1,6 @@
+# Cloudflare Pages config for `wrangler pages deploy`.
+# This is a fully static site (Next.js `output: "export"`), so Pages just
+# serves the prebuilt files in `out/`.
+name = "m-practice"
+compatibility_date = "2024-11-01"
+pages_build_output_dir = "out"

@@ -3,15 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "manifest": "node scripts/generate-manifest.mjs",
+    "copy-pdf-worker": "node scripts/copy-pdf-worker.mjs",
+    "predev": "pnpm run manifest && pnpm run copy-pdf-worker",
     "dev": "next dev",
+    "prebuild": "pnpm run manifest && pnpm run copy-pdf-worker",
     "build": "next build",
-    "start": "next start",
+    "preview": "npx --yes serve out -l 4321",
+    "deploy": "pnpm run build && wrangler pages deploy",
+    "sample-assets": "node scripts/make-sample-assets.mjs",
     "lint": "eslint"
   },
   "dependencies": {
+    "idb": "^8.0.3",
+    "lucide-react": "^1.21.0",
     "next": "16.2.9",
+    "pdfjs-dist": "^5.4.296",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "react-pdf": "^10.4.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -21,6 +31,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.104.0"
   }
 }
