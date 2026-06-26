@@ -36,6 +36,19 @@ yarn-error.log*
 # vercel
 .vercel
 
+# cloudflare / wrangler
+.wrangler/
+
+# generated at build time by prebuild (scripts/*) — reproducible, not source
+/public/pdf.worker.min.mjs
+/public/assets/manifest.json
+
+# licensed lesson media — keep the folder template (.gitkeep + README) but never
+# commit the copyrighted source files. Regenerate demo content for local dev with
+# `pnpm run sample-assets`, or drop your own licensed files into public/assets/.
+/public/assets/**/*.pdf
+/public/assets/**/*.mp3
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

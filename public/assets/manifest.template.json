@@ -1,0 +1,23 @@
+{
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "folders": [
+    {
+      "id": "lesson-1",
+      "name": "Lesson 1",
+      "pdf": {
+        "name": "lesson-1-book",
+        "path": "/assets/Lesson%201/lesson-1-book.pdf"
+      },
+      "audios": [
+        {
+          "name": "Unit 1 Intro",
+          "path": "/assets/Lesson%201/Unit%201%20Intro.mp3"
+        },
+        {
+          "name": "Unit 2 Practice",
+          "path": "/assets/Lesson%201/Unit%202%20Practice.mp3"
+        }
+      ]
+    }
+  ]
+}
